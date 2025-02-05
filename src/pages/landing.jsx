@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/images/e toll logo.svg";
 import Background from "../assets/background/bgImage.png";
 
 export default function Landing() {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -41,8 +44,16 @@ export default function Landing() {
           transition={{ delay: 0.7 }}
           className="flex flex-col w-full max-w-xs gap-4"
         >
-          <button className="w-full h-12 text-lg bg-gray-100 hover:bg-gray-200 text-gray-900">Login</button>
-          <button className="w-full h-12 text-lg text-white border border-white hover:bg-white/10">
+          <button
+            className="w-full h-12 text-lg bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-[10px]"
+            onClick={() => navigate("/sign-in")}
+          >
+            Login
+          </button>
+          <button
+            className="w-full h-12 text-lg text-white border border-white hover:bg-white/10 rounded-[10px]"
+            onClick={() => navigate("/sign-up")}
+          >
             Daftar
           </button>
         </motion.div>
