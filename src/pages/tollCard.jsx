@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { MainLayout } from "../components/layouts/MainLayout";
-// import UnderDevelopment from './underDevelopment';
+import Check from "../assets/images/check symbol.svg";
 
 export default function TollCardPage({ isSidebarVisible, toggleSidebar }) {
 	const [bank, setBank] = useState("");
@@ -64,9 +64,12 @@ export default function TollCardPage({ isSidebarVisible, toggleSidebar }) {
 			{showPopup && (
 				<div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
 					<div className='bg-white p-6 rounded-lg shadow-lg text-center'>
-						<div onClick={handleClosePopup} className='text-green-500 text-6xl cursor-pointer'>
-							&#10003;
-						</div>
+						<img
+							src={Check}
+							alt="Check"
+							onClick={handleClosePopup}
+							className='cursor-pointer'
+						/>
 					</div>
 				</div>
 			)}
