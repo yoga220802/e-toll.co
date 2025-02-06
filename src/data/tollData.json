@@ -1,0 +1,19 @@
+{
+    "tollGates": [
+      { "id": 1, "name": "Palimanan" },
+      { "id": 2, "name": "Madiun" },
+      { "id": 3, "name": "Jakarta" },
+      { "id": 4, "name": "Surabaya" }
+    ],
+    "vehicleClasses": [
+      { "id": 1, "name": "Golongan I" },
+      { "id": 2, "name": "Golongan II" },
+      { "id": 3, "name": "Golongan III" }
+    ],
+    "tariffs": [
+      { "origin": 1, "destination": 2, "classId": 1, "price": 300000 },
+      { "origin": 1, "destination": 2, "classId": 2, "price": 400000 },
+      { "origin": 1, "destination": 2, "classId": 3, "price": 500000 }
+    ]
+  }
+  
