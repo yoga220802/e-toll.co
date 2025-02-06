@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 export function Sidebar() {
   const navigate = useNavigate();
   const menuItems = [
-    { icon: LayoutGrid, label: "Dashboard", active: true },
-    { icon: CalendarRange, label: "Kartu E-Tol" },
-    { icon: User, label: "Perjalanan" },
-    { icon: Store, label: "Layanan Jalan Tol" },
-    { icon: BadgeInfo, label: "Panduan Lalu Lintas" },
-    { icon: ReceiptText, label: "Transaksi" },
-    { icon: Clock, label: "Riwayat" },
+    { icon: LayoutGrid, label: "Dashboard", active: true, action: () => navigate("/dashboard") },
+    { icon: CalendarRange, label: "Kartu E-Tol", action: () => navigate("/toll-card") },
+    { icon: User, label: "Perjalanan", action: () => navigate("/trip") },
+    { icon: Store, label: "Layanan Jalan Tol", action: () => navigate("/toll-service") },
+    { icon: BadgeInfo, label: "Panduan Lalu Lintas", action: () => navigate("/toll-guide") },
+    { icon: ReceiptText, label: "Transaksi", action: () => navigate("/transaction") },
+    { icon: Clock, label: "Riwayat", action: () => navigate("/history") },
   ];
 
   return (
@@ -26,7 +26,7 @@ export function Sidebar() {
       </div>
       <nav className="flex-1 space-y-2">
         {menuItems.map((item) => (
-          <Button key={item.label} className={`w-full flex items-center gap-3 text-white ${item.active ? "bg-white/20" : "hover:bg-white/10"}`}>
+          <Button key={item.label} className={`w-full flex items-center gap-3 text-white ${item.active ? "bg-white/20" : "hover:bg-white/10"}` } onClick={item.action}>
             <item.icon className="w-5 h-5" />
             {item.label}
           </Button>
