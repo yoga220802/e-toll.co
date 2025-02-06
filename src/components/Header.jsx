@@ -3,8 +3,10 @@ import { Input } from "./ui/uiInput";
 import { Button } from "./ui/uiButton";
 import Flag from "../assets/images/flag.svg";
 import Profile from "../assets/images/profile.svg";
+import { useNavigate } from "react-router-dom";
 
 export function Header({ toggleSidebar }) {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-between p-4 border-b">
       <div className="flex items-center flex-1 max-w-xl">
@@ -18,7 +20,7 @@ export function Header({ toggleSidebar }) {
         />
       </div>
       <div className="flex items-center gap-4">
-        <Button className="relative">
+        <Button className="relative" onClick={() => navigate("/notification")}>
           <Bell className="w-5 h-5" />
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-[10px] text-white flex items-center justify-center">
             2
