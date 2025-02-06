@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Sidebar } from "../Sidebar";
 import { Header } from "../Header";
 import { Button } from "../ui/uiButton";
 import { Menu } from "lucide-react";
 
-export function MainLayout({ children }) {
-  const [isSidebarVisible, setSidebarVisible] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarVisible(!isSidebarVisible);
-  };
-
+export function MainLayout({ children, isSidebarVisible, toggleSidebar }) {
   return (
     <div className="min-h-screen flex">
       <div
         className={`transition-all duration-300 ${
-          isSidebarVisible ? "w-[0px]" : "w-0"
+          isSidebarVisible ? "w-[20px]" : "w-0"
         }`}
       >
         <Sidebar isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
