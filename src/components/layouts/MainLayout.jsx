@@ -2,7 +2,6 @@ import React from "react";
 import { Sidebar } from "../Sidebar";
 import { Header } from "../Header";
 import { Button } from "../ui/uiButton";
-import { Menu } from "lucide-react";
 
 export function MainLayout({ children, isSidebarVisible, toggleSidebar }) {
   return (
@@ -18,7 +17,6 @@ export function MainLayout({ children, isSidebarVisible, toggleSidebar }) {
         <Header toggleSidebar={toggleSidebar} />
         <main className="p-6">
           <Button className="mb-4 sm:hidden" onClick={toggleSidebar}>
-            <Menu className="w-5 h-5" />
           </Button>
           {children}
         </main>
