@@ -5,7 +5,7 @@ import { Button } from "../components/ui/uiButton";
 import { useNavigate } from "react-router-dom";
 import { MainLayout } from "../components/layouts/MainLayout";
 
-export default function Dashboard() {
+export default function Dashboard({ isSidebarVisible, toggleSidebar }) {
   const navigate = useNavigate();
   const cards = [
     { icon: <User className="w-full h-full" />, onclick: () => navigate("/trip") },
@@ -17,7 +17,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <MainLayout>
+    <MainLayout isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar}>
       <div className="flex items-center gap-4 mb-6">
         <Button>
           <ArrowLeft className="w-5 h-5" />
