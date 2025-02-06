@@ -24,7 +24,7 @@ export default function Dashboard() {
         </Button>
         <h1 className="text-2xl font-semibold">Dashboard</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {cards.map((card, index) => (
           <DashboardCard key={index} {...card} onclick={card.onclick} />
         ))}

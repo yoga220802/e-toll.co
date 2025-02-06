@@ -2,7 +2,7 @@ import { LayoutGrid, CalendarRange, User, Store, ReceiptText, BadgeInfo, Clock, 
 import { Button } from "./ui/uiButton";
 import { useNavigate } from 'react-router-dom';
 
-export function Sidebar() {
+export function Sidebar({ isSidebarVisible, toggleSidebar }) {
   const navigate = useNavigate();
   const menuItems = [
     { icon: LayoutGrid, label: "Dashboard", active: true, action: () => navigate("/dashboard") },
@@ -15,7 +15,7 @@ export function Sidebar() {
   ];
 
   return (
-    <div className="fixed left-0 h-screen w-[280px] bg-gradient-to-b from-[#6E37FF] to-[#8D6AFF] text-white p-6 flex flex-col">
+    <div className={`fixed left-0 h-screen w-[280px] bg-gradient-to-b from-[#6E37FF] to-[#8D6AFF] text-white p-6 flex flex-col transition-transform duration-300 ${isSidebarVisible ? "translate-x-0" : "-translate-x-full"}`}>
       <div className="flex items-center gap-2 mb-8">
         <div className="w-8 h-8">
           <svg viewBox="0 0 24 24" className="w-full h-full">

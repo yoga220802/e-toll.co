@@ -5,7 +5,7 @@ import { Button } from "../ui/uiButton";
 import { Menu } from "lucide-react";
 
 export function MainLayout({ children }) {
-  const [isSidebarVisible, setSidebarVisible] = useState(true);
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
@@ -15,15 +15,15 @@ export function MainLayout({ children }) {
     <div className="min-h-screen flex">
       <div
         className={`transition-all duration-300 ${
-          isSidebarVisible ? "w-[280px] opacity-100" : "w-0 opacity-0"
+          isSidebarVisible ? "w-[0px]" : "w-0"
         }`}
       >
-        {isSidebarVisible && <Sidebar />}
+        <Sidebar isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
       </div>
-      <div className={`flex-1 transition-all duration-300 ${isSidebarVisible ? "ml-[0px]" : "ml-0"}`}>
-        <Header />
+      <div className={`flex-1 transition-all duration-300 ${isSidebarVisible ? "ml-[280px]" : "ml-0"}`}>
+        <Header toggleSidebar={toggleSidebar} />
         <main className="p-6">
-          <Button className="mb-4" onClick={toggleSidebar}>
+          <Button className="mb-4 sm:hidden" onClick={toggleSidebar}>
             <Menu className="w-5 h-5" />
           </Button>
           {children}
