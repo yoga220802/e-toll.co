@@ -12,16 +12,16 @@ import {
   GuidePage,
   TransactionPage,
   HistoryPage,
-  NotificationList
+  NotificationList,
+  ServiceDetail,
+  TrafficSignDetail,
+  UnderDevelopmentTrafficGuide,
+  Settings,
+  AccountDetail,
+  VerifyEmail,
+  ChangeUsername,
+  ChangePassword
 } from "../pages";
-import ServiceDetail from "../pages/dashboard/serviceDetail";
-import TrafficSignDetail from "../pages/trafficGuide/TrafficSignDetail";
-import UnderDevelopmentTrafficGuide from "../pages/trafficGuide/otherTrafficGuide";
-import Settings from "../pages/dashboard/setting";
-import AccountDetail from "../pages/account/accountDetail";
-import VerifyEmail from "../pages/account/verifyEmail";
-import ChangeUsername from "../pages/account/ChangeUsername";
-import ChangePassword from "../pages/account/ChangePassword";
 
 const AppRoutes = ({ isSidebarVisible, toggleSidebar }) => {
   return (
