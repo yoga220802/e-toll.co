@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "location": "GT Cipularang",
+      "amount": 10000,
+      "date": "2025-02-07 10:00:00"
+    },
+    {
+      "id": 2,
+      "location": "GP Cikampek",
+      "amount": 30000,
+      "date": "2025-02-07 11:30:00"
+    },
+    {
+      "id": 3,
+      "location": "GT Mandalika",
+      "amount": 50000,
+      "date": "2025-02-07 12:15:00"
+    },
+    {
+      "id": 4,
+      "location": "GP Mandalika 2",
+      "amount": 100000,
+      "date": "2025-02-07 13:45:00"
+    },
+    {
+      "id": 5,
+      "location": "GT Cikampek 2",
+      "amount": 100000,
+      "date": "2025-02-07 14:10:00"
+    },
+    {
+      "id": 6,
+      "location": "GT Mandalika 3",
+      "amount": 30000,
+      "date": "2025-02-07 15:25:00"
+    }
+  ]
+  
