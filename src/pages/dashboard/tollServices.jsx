@@ -44,7 +44,7 @@ export default function TollServicePage({ isSidebarVisible, toggleSidebar }) {
 		<MainLayout isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar}>
 			<div className='p-6'>
 				<h1 className='text-2xl font-bold'>Layanan Jalan Toll</h1>
-				<div className='grid grid-cols-3 gap-6 mt-6'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6'>
 					{services.map((service) => (
 						<ServiceCard key={service.title} {...service} />
 					))}

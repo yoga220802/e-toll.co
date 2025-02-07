@@ -7,7 +7,9 @@ const ServiceDetail = ({ isSidebarVisible, toggleSidebar }) => {
 
 	return (
 		<MainLayout isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar}>
-			<ServiceForm serviceName={serviceType} />;
+			<div className="px-4 py-6 md:px-8">
+				<ServiceForm serviceName={serviceType} />
+			</div>
 		</MainLayout>
 	);
 };

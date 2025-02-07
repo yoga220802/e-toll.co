@@ -25,9 +25,9 @@ const ServiceForm = ({ serviceName }) => {
   };
 
   return (
-    <div className="px-8 py-6">
+    <div className="px-4 py-6 md:px-8">
       <h1 className="text-3xl font-bold">{serviceName}</h1>
-      <form className="mt-6 grid grid-cols-2 gap-4 w-full md:w-3/4" onSubmit={handleSubmit}>
+      <form className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 w-full" onSubmit={handleSubmit}>
         <input
           type="text"
           name="namaKendaraan"
@@ -69,7 +69,7 @@ const ServiceForm = ({ serviceName }) => {
         />
         
         {/* Wrapper untuk memastikan tombol ada di ujung kanan */}
-        <div className="col-span-2 flex justify-end">
+        <div className="col-span-1 md:col-span-2 flex justify-end">
           <button
             type="submit"
             className="bg-blue-900 text-white py-2 px-6 rounded w-[120px]"
