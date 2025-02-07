@@ -27,12 +27,12 @@ export default function TollCardPage({ isSidebarVisible, toggleSidebar }) {
 
 					<div className='bg-white shadow-lg p-6 rounded-lg'>
 						<h2 className='text-xl font-semibold mb-4'>BCA Flazz</h2>
-						<form onSubmit={handleSubmit} className='flex gap-4'>
+						<form onSubmit={handleSubmit} className='flex flex-col md:flex-row gap-4'>
 							{/* Dropdown Pilihan Bank */}
 							<select
 								value={bank}
 								onChange={(e) => setBank(e.target.value)}
-								className='border p-2 rounded-lg'>
+								className='border p-2 rounded-lg w-full md:w-auto'>
 								<option value=''>Tambahkan Bank</option>
 								<option value='BRI'>BRI</option>
 								<option value='BNI'>BNI</option>
