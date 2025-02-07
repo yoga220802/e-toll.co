@@ -15,6 +15,8 @@ import {
   NotificationList
 } from "../pages";
 import ServiceDetail from "../pages/dashboard/serviceDetail";
+import TrafficSignDetail from "../pages/trafficGuide/TrafficSignDetail";
+import UnderDevelopmentTrafficGuide from "../pages/trafficGuide/otherTrafficGuide";
 
 const AppRoutes = ({ isSidebarVisible, toggleSidebar }) => {
   return (
@@ -32,6 +34,8 @@ const AppRoutes = ({ isSidebarVisible, toggleSidebar }) => {
       <Route path="/history" element={<HistoryPage isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
       <Route path="/notification" element={<NotificationList isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar}/>} />
       <Route path="/toll-service/:serviceType" element={<ServiceDetail  isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
+      <Route path="/toll-guide/traffic-signs" element={<TrafficSignDetail isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
+      <Route path="/toll-guide/under-dev" element={<UnderDevelopmentTrafficGuide isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
     </Routes>
   );
 };
