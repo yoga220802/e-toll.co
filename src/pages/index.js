@@ -1,0 +1,12 @@
+export { default as WelcomePage } from './welcome';
+export { default as SignUpForm } from './auth/signUp';
+export { default as SignInForm } from './auth/signIn';
+export { default as Landing } from './landing';
+export { default as Dashboard } from './dashboard/dashboard';
+export { default as TripPage } from './dashboard/trip';
+export { default as TollCardPage } from './dashboard/tollCard';
+export { default as TollServicePage } from './dashboard/tollServices';
+export { default as GuidePage } from './dashboard/guide';
+export { default as TransactionPage } from './dashboard/transaction';
+export { default as HistoryPage } from './dashboard/history';
+export { default as NotificationList } from './dashboard/notification';

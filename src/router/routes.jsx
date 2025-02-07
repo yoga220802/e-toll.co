@@ -1,17 +1,19 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import WelcomePage from "../pages/welcome";
-import SignUpForm from "../pages/signUp";
-import SignInForm from "../pages/signIn";
-import Landing from "../pages/landing";
-import Dashboard from "../pages/dashboard";
-import TripPage from "../pages/trip";
-import TollCardPage from "../pages/tollCard";
-import TollServicePage from "../pages/tollServices";
-import GuidePage from "../pages/guide";
-import TransactionPage from "../pages/transaction";
-import HistoryPage from "../pages/history";
-import NotificationList from "../pages/notification";
+import {
+  WelcomePage,
+  SignUpForm,
+  SignInForm,
+  Landing,
+  Dashboard,
+  TripPage,
+  TollCardPage,
+  TollServicePage,
+  GuidePage,
+  TransactionPage,
+  HistoryPage,
+  NotificationList
+} from "../pages";
 
 const AppRoutes = ({ isSidebarVisible, toggleSidebar }) => {
   return (

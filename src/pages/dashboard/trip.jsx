@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import tollData from "../data/tollData.json";
-import { Button } from "../components/ui/uiButton";
-import { MainLayout } from "../components/layouts/MainLayout";
+import tollData from "../../data/tollData.json";
+import { Button } from "../../components/ui/uiButton";
+import { MainLayout } from "../../components/layouts/MainLayout";
 
 export default function TripPage({ isSidebarVisible, toggleSidebar }) {
   const [origin, setOrigin] = useState("");

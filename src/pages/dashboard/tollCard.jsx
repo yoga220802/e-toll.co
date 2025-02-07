@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { MainLayout } from "../components/layouts/MainLayout";
-import Check from "../assets/images/check symbol.svg";
+import { MainLayout } from "../../components/layouts/MainLayout";
+import Check from "../../assets/images/check symbol.svg";
 
 export default function TollCardPage({ isSidebarVisible, toggleSidebar }) {
 	const [bank, setBank] = useState("");

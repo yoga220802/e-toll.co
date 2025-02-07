@@ -1,6 +1,6 @@
 import { Facebook } from 'lucide-react';
-import sideImage from '../assets/background/side.png';
-import eTollLogo from '../assets/images/e toll logo.svg';
+import sideImage from '../../assets/background/side.png';
+import eTollLogo from '../../assets/images/e toll logo.svg';
 import { useNavigate } from 'react-router-dom';
 
 export default function SignInForm() {

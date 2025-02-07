@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import NotificationData from "../data/notifications.json";
-import { MainLayout } from "../components/layouts/MainLayout";
+import NotificationData from "../../data/notifications.json";
+import { MainLayout } from "../../components/layouts/MainLayout";
 export default function NotificationList({ isSidebarVisible, toggleSidebar }) {
 	const [notifications, setNotifications] = useState([]);
 	const [selectedNotification, setSelectedNotification] = useState(null);

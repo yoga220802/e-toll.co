@@ -1,9 +1,9 @@
 import React from "react";
 import { ArrowLeft, User, CalendarRange, Store, BadgeInfo, ReceiptText, History } from "lucide-react";
-import { DashboardCard } from "../components/DashboardCard";
-import { Button } from "../components/ui/uiButton";
+import { DashboardCard } from "../../components/DashboardCard";
+import { Button } from "../../components/ui/uiButton";
 import { useNavigate } from "react-router-dom";
-import { MainLayout } from "../components/layouts/MainLayout";
+import { MainLayout } from "../../components/layouts/MainLayout";
 
 export default function Dashboard({ isSidebarVisible, toggleSidebar }) {
   const navigate = useNavigate();
