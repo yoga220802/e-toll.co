@@ -14,6 +14,7 @@ import {
   HistoryPage,
   NotificationList
 } from "../pages";
+import ServiceDetail from "../pages/dashboard/serviceDetail";
 
 const AppRoutes = ({ isSidebarVisible, toggleSidebar }) => {
   return (
@@ -30,6 +31,7 @@ const AppRoutes = ({ isSidebarVisible, toggleSidebar }) => {
       <Route path="/transaction" element={<TransactionPage isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
       <Route path="/history" element={<HistoryPage isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
       <Route path="/notification" element={<NotificationList isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar}/>} />
+      <Route path="/toll-service/:serviceType" element={<ServiceDetail  isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />} />
     </Routes>
   );
 };
