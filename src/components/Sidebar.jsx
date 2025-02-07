@@ -34,7 +34,7 @@ export function Sidebar({ isSidebarVisible, toggleSidebar }) {
       </nav>
       <Button className="mb-8 bg-white text-[#6E37FF]" onClick={() => navigate("/sign-up")}>+ Register</Button>
       <div className="space-y-2">
-        <Button className="w-full flex items-center gap-3 text-white hover:bg-white/10">
+        <Button className="w-full flex items-center gap-3 text-white hover:bg-white/10" onClick={() => navigate("/setting")}>
           <Settings className="w-5 h-5" />
           Seting
         </Button>
