@@ -1,17 +1,18 @@
 import { LayoutGrid, CalendarRange, User, Store, ReceiptText, BadgeInfo, Clock, Settings, LogOut } from "lucide-react";
 import { Button } from "./ui/uiButton";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export function Sidebar({ isSidebarVisible, toggleSidebar }) {
   const navigate = useNavigate();
+  const location = useLocation();
   const menuItems = [
-    { icon: LayoutGrid, label: "Dashboard", active: true, action: () => navigate("/dashboard") },
-    { icon: CalendarRange, label: "Kartu E-Tol", action: () => navigate("/toll-card") },
-    { icon: User, label: "Perjalanan", action: () => navigate("/trip") },
-    { icon: Store, label: "Layanan Jalan Tol", action: () => navigate("/toll-service") },
-    { icon: BadgeInfo, label: "Panduan Lalu Lintas", action: () => navigate("/toll-guide") },
-    { icon: ReceiptText, label: "Transaksi", action: () => navigate("/transaction") },
-    { icon: Clock, label: "Riwayat", action: () => navigate("/history") },
+    { icon: LayoutGrid, label: "Dashboard", path: "/dashboard" },
+    { icon: CalendarRange, label: "Kartu E-Tol", path: "/toll-card" },
+    { icon: User, label: "Perjalanan", path: "/trip" },
+    { icon: Store, label: "Layanan Jalan Tol", path: "/toll-service" },
+    { icon: BadgeInfo, label: "Panduan Lalu Lintas", path: "/toll-guide" },
+    { icon: ReceiptText, label: "Transaksi", path: "/transaction" },
+    { icon: Clock, label: "Riwayat", path: "/history" },
   ];
 
   return (
@@ -26,7 +27,11 @@ export function Sidebar({ isSidebarVisible, toggleSidebar }) {
       </div>
       <nav className="flex-1 space-y-2">
         {menuItems.map((item) => (
-          <Button key={item.label} className={`w-full flex items-center gap-3 text-white ${item.active ? "bg-white/20" : "hover:bg-white/10"}` } onClick={item.action}>
+          <Button
+            key={item.label}
+            className={`w-full flex items-center gap-3 text-white ${location.pathname === item.path ? "bg-white/20" : "hover:bg-white/10"}`}
+            onClick={() => navigate(item.path)}
+          >
             <item.icon className="w-5 h-5" />
             {item.label}
           </Button>
