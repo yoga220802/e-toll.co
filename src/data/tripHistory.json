@@ -1,0 +1,28 @@
+{
+    "history": [
+      {
+        "id": 1,
+        "date": "20-01-2025",
+        "title": "Plan a Trip",
+        "route": "Jakarta - Cirebon"
+      },
+      {
+        "id": 2,
+        "date": "01-01-2025",
+        "title": "Plan a Trip",
+        "route": "Bandung - Bekasi"
+      },
+      {
+        "id": 3,
+        "date": "01-01-2025",
+        "title": "Plan a Trip",
+        "route": "Bandung - Jakarta"
+      }
+    ],
+    "knowledgeMetrics": {
+      "starting": "64%",
+      "current": "86%",
+      "gain": "+34%"
+    }
+  }
+  
