@@ -1,6 +1,6 @@
 import React from "react";
 import { MainLayout } from "../../components/layouts/MainLayout";
-import UnderDevelopment from "../underDevelopment";
+// import UnderDevelopment from "../underDevelopment";
 import { useNavigate } from "react-router-dom";
 
 import traffic_signs from "../../assets/images/trafic guide/traffic-signs.svg"

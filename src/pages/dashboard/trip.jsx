@@ -71,14 +71,20 @@ export default function TripPage({ isSidebarVisible, toggleSidebar }) {
               </thead>
               <tbody>
                 <tr>
+                  {/* eslint-disable-next-line eqeqeq */}
                   <td className="border border-gray-400 p-2">{tollData.tollGates.find(g => g.id == origin)?.name || "-"}</td>
+                  {/* eslint-disable-next-line eqeqeq */}
                   <td className="border border-gray-400 p-2">{tollData.tollGates.find(g => g.id == destination)?.name || "-"}</td>
                   <td className="border border-gray-400 p-2">{tariff}</td>
+                  {/* eslint-disable-next-line eqeqeq */}
                   <td className="border border-gray-400 p-2">{tariff}</td>
                 </tr>
               </tbody>
             </table>
-            <p className="mt-2 text-lg font-medium">Tarif Tol {tollData.tollGates.find(g => g.id == origin)?.name} - {tollData.tollGates.find(g => g.id == destination)?.name} <br /> RP {tariff}</p>
+            <p className="mt-2 text-lg font-medium">
+              {/* eslint-disable-next-line eqeqeq */}
+              Tarif Tol {tollData.tollGates.find(g => g.id == origin)?.name} - {tollData.tollGates.find(g => g.id == destination)?.name} <br /> RP {tariff}
+            </p>
           </div>
         )}
 

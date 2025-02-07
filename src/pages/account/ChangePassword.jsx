@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import userData from "../../data/userData.json"; // Import data dummy
 import { useNavigate } from "react-router-dom";
 import { MainLayout } from "../../components/layouts/MainLayout";
 import checkSymbol from "../../assets/images/check symbol.svg"; // Import check symbol image
@@ -12,11 +11,6 @@ const ChangePassword = ({ isSidebarVisible, toggleSidebar }) => {
 	const [showPopup, setShowPopup] = useState(false); // State for showing popup
 
 	const navigate = useNavigate();
-	const [user, setUser] = useState({});
-
-	useEffect(() => {
-		setUser(userData);
-	}, []);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

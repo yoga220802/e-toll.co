@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import userData from "../../data/userData.json"; // Import data dummy
 import { useNavigate, useLocation } from "react-router-dom";
 import { MainLayout } from "../../components/layouts/MainLayout";
 
@@ -9,11 +8,6 @@ const VerifyEmail = ({ isSidebarVisible, toggleSidebar }) => {
     const [password, setPassword] = useState("");
 	const navigate = useNavigate();
 	const location = useLocation();
-	const [user, setUser] = useState({});
-
-	useEffect(() => {
-		setUser(userData);
-	}, []);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
